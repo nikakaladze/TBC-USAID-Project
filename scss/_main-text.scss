@@ -1,5 +1,7 @@
 @import "reset";
 @import "variables";
+@import 'responsive';
+
 
 .main-text {
   width: 100%;
@@ -13,7 +15,7 @@
 
     p {
       font-size: 28px;
-      padding-bottom: 20px;
+      padding-bottom: 40px;
       line-height: 1.6em;
     }
 
@@ -30,3 +32,17 @@
     }
   }
 }
+
+
+@include mobile(){
+
+  .main-text{
+    .text{
+
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+}
+

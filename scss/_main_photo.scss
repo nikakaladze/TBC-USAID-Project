@@ -6,23 +6,27 @@
   color: $text-first-color;
 
   .bg-photo {
-
     background-image: url(./images/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.webp);
-    
     height: 352px;
+    background-size: cover;
+    background-position: center;
 
     .title {
       margin: 0 auto;
-      width: 1000px;
-      padding-top: 120px;
-      // border: 2px solid red;
-
-      h3   {
+      max-width: 980px;
+      padding-top: 105px;
+      font-weight: bolder;  
+      
+      h3 {
         line-height: 1.6em;
         font-size: 34px;
         span {
-            display: block;
-            font-size: 42px;
+          display: block;
+          font-size: 42px;
+        }
+        span:first-child{
+          margin-bottom: 10px;  
+
         }
       }
     }

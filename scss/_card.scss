@@ -1,74 +1,114 @@
-@import 'reset';
+@import "reset";
+@import "responsive";
 
+section.courses {
+  background-color: #161616;
+  padding-block: 34px 50px;
 
-.card-container{
+  h2 {
+    margin: 0 auto 67px;
+    max-width: 980px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .card-container {
     display: flex;
-    justify-content:center;
-    padding-top: 100px;
+    justify-content: center;
     flex-wrap: wrap;
-    background-color: #161616;
-    padding-bottom:50px;
 
+    .card {
+      width: 300px;
+      color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
+      margin: 20px;
+      border: 0.5px solid silver;
 
+      .img-size {
+        width: 100%;
+      }
+      .card-content {
+        padding: 25px;
 
-    .card{
-        width: 300px;
-        color: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
-        margin: 20px;
-        border:0.5px solid  silver;
-        
-    
-        .img-size{
-            width: 100%;
-           
+        p {
+          color: #f4f4f4;
+          font-size: 28px;
         }
-        .card-content{
-            padding: 25px;
 
-            p{
-                color: #F4F4F4;
-                font-size: 28px;
-                
-            }
-    
-            .pad-bot{
-                padding-bottom: 70px;
-            }
+        .pad-bot {
+          padding-bottom: 70px;
+        }
 
-             h3{
-                font-size: 18px;
-               padding-bottom: 30px;
-            }
+        h3 {
+          font-size: 18px;
+          padding-bottom: 30px;
+        }
 
-            p{
-                font-size: 15px;
-                color: $text-first-color;
-            }
-            #pad{
-                padding-bottom: 50px;
-            }
-            #pad1{
-                padding-bottom: 50px;
-            }
+        p {
+          font-size: 15px;
+          color: $text-first-color;
+        }
+        #pad {
+          padding-bottom: 50px;
+        }
+        #pad1 {
+          padding-bottom: 50px;
+        }
 
-            .btn{
-                display: inline-block;
-                padding: 8px 16px;  
-                text-decoration: none;
-                color: $blue-color;
-                margin-top: 16px;
-                font-size: 16px;
-            }
-        }    
+        .btn {
+          display: inline-block;
+          padding: 8px 16px;
+          text-decoration: none;
+          color: $blue-color;
+          margin-top: 16px;
+          font-size: 16px;
+          padding: 16px 12px;
+          display: flex;
+          align-items: center;
 
-
-
-    
+          span {
+            margin-right: 5px;
+            font-size: 28px;
+          }
+        }
+      }
     }
-    
+  }
 
+  @include mobile() {
 
+    .courses{
+      h2{
+        text-align: center;
+      }
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      
+      h2{
+        text-align: center;
+      }
+      .card {
+        margin: 15px auto;
+        .card-content {
+          .pad-bot {
+            padding-bottom: 0;
+          }
+          .btn {
+            padding: 16px 5px;
+            display: flex;
+            align-items: center;
+
+            span {
+              margin-right: 5px;
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 @import "variables";
 @import "reset";
+@import "responsive";
 
 .header-wrapper {
   width: 100%;
@@ -14,6 +15,7 @@
     align-items: center;
     margin: 0 auto;
     padding: 19px;
+    font-weight: bold;
 
     svg {
       cursor: pointer;
@@ -22,6 +24,30 @@
     }
 
     nav {
+      .burger {
+        width: 26px;
+        height: 21px;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+
+        .bar {
+          height: 3px;
+          background-color: rgb(219, 219, 219);
+          width: 100%;
+          border-radius: 1.5px;
+
+          &:first-of-type,
+          &:last-of-type {
+            width: 50%;
+          }
+
+          &:last-of-type {
+            margin-left: auto;
+          }
+        }
+      }
+
       ul {
         list-style: none;
         display: flex;
@@ -35,6 +61,66 @@
         color: $text-first-color;
         &:hover {
           color: $blue-color;
+        }
+      }
+
+
+      ///--------------Mobile----Version-----------------------//
+      /// 
+      /// 
+      /// 
+      /// 
+
+      @include mobile {
+        .burger {
+          display: flex;
+          background-color: rgb(34, 34, 34);
+          
+          
+        }
+
+        ul {
+          position: absolute;
+          top: 0;
+          right:0;
+          translate: 300px 0;
+          transition: 0.5s ease-out;
+          flex-direction: column;
+          
+          background: rgb(34, 34, 34);
+          text-align: right;
+          display: none;
+          
+          li{
+            margin: 20px 7px 10px 0 ;
+
+          }
+          #close{
+            
+            color: #767676;
+            margin:5px 25px 15px 0;
+          }
+          //
+         
+          
+          width: 200px;
+          height: 692px;
+          // 
+          //
+          //
+        //  li{
+        //   display: flex;
+        //   justify-content: flex-end;
+         
+        //  }
+        
+         //
+          
+          &.active {
+           
+            display: block;
+            translate: 0 0;
+          }
         }
       }
     }
