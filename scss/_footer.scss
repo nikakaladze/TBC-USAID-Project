@@ -1,0 +1,51 @@
+@import "variables";
+@import "reset";
+
+.footer {
+  width: 100%;
+  background-color: rgb(26, 30, 31);
+  color: $text-first-color;
+  padding-top: 64px;
+
+  .tbc {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+
+    img {
+      padding-bottom: 20px;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .socials {
+        height: max-content;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .write-button {
+        background-color: $tbc-primary;
+        padding: 7.5px 32px;
+        border-radius: 6px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 43px;
+      }
+    }
+
+    .copyright:last-of-type {
+      margin-block: 15px 43px;
+    }
+  }
+}

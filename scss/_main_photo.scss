@@ -1,0 +1,30 @@
+@import "variables";
+@import "reset";
+
+.photo-content {
+  width: 100%;
+  color: $text-first-color;
+
+  .bg-photo {
+
+    background-image: url(./images/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.webp);
+    
+    height: 352px;
+
+    .title {
+      margin: 0 auto;
+      width: 1000px;
+      padding-top: 120px;
+      // border: 2px solid red;
+
+      h3   {
+        line-height: 1.6em;
+        font-size: 34px;
+        span {
+            display: block;
+            font-size: 42px;
+        }
+      }
+    }
+  }
+}

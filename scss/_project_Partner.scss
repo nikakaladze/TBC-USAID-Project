@@ -1,0 +1,98 @@
+@import "reset";
+@import "variables";
+
+.carousel-wrapper {
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 200px;
+}
+
+.carousel-slider {
+  max-width: min(calc(100% - 160px), 1400px);
+  margin-inline: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item {
+  width: 350px;
+  height: 100px;
+  display: none;
+}
+
+.carousel-next svg {
+  rotate: 180deg;
+  width: 50px;
+  height: 50px;
+  fill: #dcdcdc;
+  stroke: #dcdcdc;
+  stroke-width: 1px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-radios {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.slider-radios li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.slider-radios li.active {
+  opacity: 1;
+}
+
+.slider-radios li:hover {
+  opacity: 0.8;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+@media (width <= 1324px) {
+  .carousel-item {
+    width: 250px;
+    height: 75px;
+  }
+}
