@@ -7,10 +7,16 @@
   color: $text-first-color;
   padding-top: 64px;
 
+  .tbc-icon {
+    max-width: 980px;
+    margin: 0 auto 24px;
+  }
+
   .tbc {
     display: flex;
     justify-content: space-between;
     max-width: 980px;
+    align-items: center;
     margin: 0 auto;
 
     img {
@@ -48,25 +54,24 @@
       margin-block: 15px 43px;
     }
   }
-}
 
+  @include mobile {
+    padding-top: 32px;
 
-@include mobile(){
+    .tbc, .tbc-icon {
+      padding-inline: 20px;
+    }
 
+    .tbc {
+      flex-direction: column-reverse;
+      align-items: flex-start;
 
-  .footer{
-    tbc{
-      
-      .contact-wrapper{
-        .socials{
-          a{
-            img{
-              width: 35px;
-              height: 35px;
-            }
-          }
-        }
+      .contact-wrapper {
+        width: 100%;
+        flex-direction: row;
       }
     }
   }
 }
+
+

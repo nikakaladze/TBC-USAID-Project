@@ -7,7 +7,9 @@
 header {
   position: sticky;
   top: 0;
-  
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .header-wrapper {
@@ -65,21 +67,18 @@ header {
         list-style: none;
         display: flex;
         align-items: center;
-
-        li{
-          i{
-            display: none;
-          }
+        
+        li:first-child{
+          display: none;
         }
       }
+
 
       a {
         text-decoration: none;
         padding: 0 20px;
         font-size: 14px;
         color: $text-first-color;
-
-      
         &:hover {
           color: $blue-color;
         }
@@ -94,50 +93,38 @@ header {
       @include mobile {
         .burger {
           display: flex;
-
-              
           background-color: rgb(34, 34, 34);
         }
 
         ul {
-
-          li{
-            i{
-              
-              // display: block;
-              margin: 20px;
-              width: 25px;
-              height: 25px;
-              color: #767676;
-            
-          }
-          }
           position: absolute;
           top: 0;
           right: 0;
           translate: 300px 0;
           transition: 0.5s ease-out;
           flex-direction: column;
-
-          background: rgb(34, 34, 34);
           text-align: right;
           display: none;
+          width: 200px;
+          height: 100vh;
+          background-color: #222222;
 
           li {
             margin: 20px 7px 10px 0;
+
+            &:first-child {
+              display: block;
+              color: rgb(118,118,118);
+              font-size: 32px;
+              margin-right: 20px;
+            }
           }
-
-          //
-
-          width: 200px; //
-          height: 692px; //
-          background-color: #222222; //
-
-          //
 
           &.active {
             display: block;
             translate: 0 0;
+
+          
           }
         }
       }

@@ -1,6 +1,15 @@
+@import "reset";
+@import "variables";
+@import 'responsive';
+
 .faq {
   background-color: #161616;
-  padding: 50px 0 ;
+  padding: 30px 0;
+
+  @include mobile {
+    padding-inline: 20px;
+  }
+
   .questions-wrapper {
     margin-inline: auto;
     color: white;
@@ -15,7 +24,7 @@
         font-size: 20px;
         text-decoration: none;
         color: #00aef3;
-       
+
         a:hover {
           color: silver;
           transition: 0.4s;
@@ -79,48 +88,3 @@
     }
   }
 }
-
-@include mobile(){
-  
-    .faq{
-      display: flex;
-     
-
-      .questions-wrapper{
-        
-        .question-container{
-
-          .answer{
-           
-            line-height: 2em;
-            padding: 2px 0 3px 20px;
-            h5{
-              font-size:14px;
-
-            }
-            p{
-              font-size: 14px;
-            }
-          }
-
-          .question{
-            
-            p{
-              font-size: 16px;
-            }
-          }
-        }
-
-        .questions-header{
-
-          a{
-            font-size: 16px;
-          }
-          .large-font{
-            font-size: 20px;
-          }
-        }
-      }
-      
-}
-  }  

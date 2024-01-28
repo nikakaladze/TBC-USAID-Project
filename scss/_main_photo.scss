@@ -11,12 +11,12 @@
   //----------------start-----------
 
   .bg-photo {
-    background-image: url(../images/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.webp);
-
-    height: 352px;
+   background-image: url(../images/main-photo.webp);
     background-size: cover;
     background-position: center;
+    height: 352px;
 
+    
     .title {
       margin: 0 auto;
       max-width: 980px;
@@ -35,24 +35,19 @@
         }
       }
     }
-  }
-}
 
-@include mobile(){
+    @include mobile {
+      .title {
+        display: grid;
+        place-content: center;
 
-  .photo-content{
-
-    .bg-photo{
-
-      .title{
-        font-weight: bold;
-        
-        h3{
-          padding-left: 50px;
-          line-height: 1.6em;  
-          width: 225px;
+        h3 {
           font-size: 22px;
-          span{
+          font-weight: bold;
+          width: max-content;
+          max-width: 280px;
+
+          span {
             font-size: 24px;
           }
         }
@@ -60,3 +55,4 @@
     }
   }
 }
+

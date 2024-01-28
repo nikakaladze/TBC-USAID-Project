@@ -1,14 +1,15 @@
-const burger = document.querySelector('.burger')
 const ul = document.querySelector('nav ul')
+const nav = document.querySelector('nav')
+const closeBtn = document.querySelector('.close i')
 
 
-burger.addEventListener('click', () => {
-    ul.classList.add('active')
+window.addEventListener('click', (event) => {
+    if(!nav.contains(event.target) || event.target === closeBtn) {
+         closeMenu()
+    } else {
+        ul.classList.add('active')
+    }
 })
-
-
-function first(){
-    document.getElementById('first-child').innerHTML = ('span')
+function closeMenu() {
+    ul.classList.remove('active')
 }
-
-

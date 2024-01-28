@@ -7,16 +7,25 @@
   width: 100%;
   background-color: #2b2b2b;
   color: $text-first-color;
+  padding-inline: 20px;
 
   .text {
     max-width: 980px;
     margin: 0 auto;
     padding: 56px 0;
 
+    @include mobile {
+      padding: 32px 0;
+    }
+
     p {
       font-size: 28px;
       padding-bottom: 40px;
       line-height: 1.6em;
+
+      @include mobile {
+        font-size: 16px;
+      }
     }
 
     a {
@@ -32,25 +41,3 @@
     }
   }
 }
-//
-
-@include mobile(){
-
-.main-text{
-
-  .text{
-
-      width: 280px;
-      margin: 0 auto;
-    
-      p{
-        font-size: 16px;
-      }
-      // #df-font{
-      //   font-size: 16px;
-      // }
-  }
-}
-
-}
-//
