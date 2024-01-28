@@ -2,12 +2,22 @@
 @import "reset";
 @import "responsive";
 
+// global----styles-----------
+
+header {
+  position: sticky;
+  top: 0;
+}
+
 .header-wrapper {
   width: 100%;
   background-color: #1a1e1f;
   color: $text-first-color;
   font-family: Arial, Helvetica, sans-serif;
 
+  //-------End----header's--Global----styles-----------------
+
+  //----------start---header-------styles----------------------
   .header {
     max-width: 980px;
     display: flex;
@@ -23,13 +33,15 @@
       height: 40px;
     }
 
+    //----------start-------------navigation-----styless
+
     nav {
       .burger {
         width: 26px;
         height: 21px;
         flex-direction: column;
         justify-content: space-between;
-        display: none;
+        display: none; //
 
         .bar {
           height: 3px;
@@ -64,60 +76,45 @@
         }
       }
 
-
       ///--------------Mobile----Version-----------------------//
-      /// 
-      /// 
-      /// 
-      /// 
+      ///
+      ///
+      ///
+      ///
 
       @include mobile {
         .burger {
           display: flex;
+
+          
           background-color: rgb(34, 34, 34);
-          
-          
         }
 
         ul {
           position: absolute;
           top: 0;
-          right:0;
+          right: 0;
           translate: 300px 0;
           transition: 0.5s ease-out;
           flex-direction: column;
-          
+
           background: rgb(34, 34, 34);
           text-align: right;
           display: none;
-          
-          li{
-            margin: 20px 7px 10px 0 ;
 
+          li {
+            margin: 20px 7px 10px 0;
           }
-          #close{
-            
-            color: #767676;
-            margin:5px 25px 15px 0;
-          }
+
           //
-         
-          
-          width: 200px;
-          height: 692px;
-          // 
+
+          width: 200px; //
+          height: 692px; //
+          background-color: #222222; //
+
           //
-          //
-        //  li{
-        //   display: flex;
-        //   justify-content: flex-end;
-         
-        //  }
-        
-         //
-          
+
           &.active {
-           
             display: block;
             translate: 0 0;
           }

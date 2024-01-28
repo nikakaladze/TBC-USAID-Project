@@ -1,7 +1,7 @@
 const items = document.querySelectorAll('.carousel-item');
 const prev = document.querySelector('.carousel-prev');
 const next = document.querySelector('.carousel-next');
-const radios = document.querySelector('.slider-radios')
+const radios = document.querySelector('.slider-radios');
 let activeListIndex = 0;
 let currentIndex = 3;
 let prevIndex = 0;
@@ -49,7 +49,6 @@ function nextItem() {
 }
 
 function setActiveList(index) {
-    console.log(index)
     const lists = document.querySelectorAll('.slider-radios li')
     for (let list of lists) {
         list.classList.remove('active')

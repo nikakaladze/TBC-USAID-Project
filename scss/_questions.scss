@@ -1,40 +1,82 @@
-@import "variables";
-@import "reset";
-
-.questions-wrapper {
-  width: 100%;
+.faq {
   background-color: #161616;
-  color: $text-first-color;
-  padding: 100px;
+  padding: 30px 0;
 
-  .first-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 865px;
-    padding: 15px 0;
+  .questions-wrapper {
+    margin-inline: auto;
+    color: white;
+    max-width: 900px;
 
-    // .center{
-    //     align-items: center;
-    // }
+    .questions-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    .large-font {
-      font-size: 24px;
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #00aef3;
+
+        a:hover {
+          color: silver;
+          transition: 0.4s;
+        }
+      }
+
+      .large-font {
+        font-size: 24px;
+      }
     }
-    a {
-      font-size: 20px;
-      color: $blue-color;
-      text-decoration: none;
-    }
 
-    a:hover {
-      color: silver;
-      transition: 0.4s;
-    }
+    .question-container {
+      border-bottom: 1px solid rgb(53, 49, 49);
 
-    p {
-      font-size: 18px;
+      .question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 15px 0;
+        cursor: pointer;
+
+        .arrow-icon {
+          transition: 0.3s ease-out;
+        }
+        .question.expanded .arrow-icon {
+          rotate: 180deg;
+        }
+      }
+
+      p {
+        padding-block: 20px;
+      }
+
+      .answer {
+        margin: 0 auto;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease-out;
+        pointer-events: none;
+
+        p {
+          padding-block: 20px;
+        }
+
+        &.active {
+          max-height: 500px;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+
+      .answer h5 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
   }
 }

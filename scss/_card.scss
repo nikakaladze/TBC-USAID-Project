@@ -10,6 +10,7 @@ section.courses {
     max-width: 980px;
     font-size: 24px;
     color: #fff;
+    font-weight: normal;
   }
 
   .card-container {
@@ -51,7 +52,7 @@ section.courses {
           color: $text-first-color;
         }
         #pad {
-          padding-bottom: 50px;
+          padding-bottom: 45px;
         }
         #pad1 {
           padding-bottom: 50px;
@@ -79,11 +80,7 @@ section.courses {
 
   @include mobile() {
 
-    .courses{
-      h2{
-        text-align: center;
-      }
-    }
+    
     .card-container {
       display: flex;
       flex-wrap: wrap;
@@ -94,6 +91,8 @@ section.courses {
       .card {
         margin: 15px auto;
         .card-content {
+
+        
           .pad-bot {
             padding-bottom: 0;
           }
@@ -106,6 +105,7 @@ section.courses {
               margin-right: 5px;
               font-size: 28px;
             }
+           
           }
         }
       }
