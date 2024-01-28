@@ -1,5 +1,6 @@
 @import "reset";
 @import "responsive";
+@import "variables";
 
 section.courses {
   background-color: #161616;
@@ -25,7 +26,7 @@ section.courses {
       overflow: hidden;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
       margin: 20px;
-      border: 0.5px solid silver;
+      border: 0.5px solid rgba(85, 85, 85, 1);
 
       .img-size {
         width: 100%;
@@ -77,38 +78,39 @@ section.courses {
       }
     }
   }
+}
 
-  @include mobile() {
+@include mobile() {
+  section.courses{
 
     
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      
-      h2{
-        text-align: center;
-      }
-      .card {
-        margin: 15px auto;
-        .card-content {
+    
+    
+    //
+    .card-container{
+      .card{
+        .card-content{
 
-        
+         span{
+          margin-right: 8px;
+         }
           .pad-bot {
             padding-bottom: 0;
           }
-          .btn {
-            padding: 16px 5px;
-            display: flex;
-            align-items: center;
-
-            span {
-              margin-right: 5px;
-              font-size: 28px;
-            }
-           
+          
+          #pad1 {
+            padding:0;
           }
+          
         }
       }
+    }
+    
+  }  
+  .courses {
+    .course-title {
+      font-size: 24px;
+      margin: 10px 80px;
     }
   }
 }

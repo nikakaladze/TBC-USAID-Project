@@ -36,6 +36,21 @@
 
 @include mobile(){
 
+.main-text{
+
+  .text{
+
+      width: 280px;
+      margin: 0 auto;
+    
+      p{
+        font-size: 16px;
+      }
+      // #df-font{
+      //   font-size: 16px;
+      // }
+  }
+}
 
 }
 //

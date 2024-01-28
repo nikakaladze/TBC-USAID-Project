@@ -111,18 +111,18 @@
   right: 0;
 }
 
-// @media (width <= 1324px) {
 
-//   .carousel-item {
-//     width: 250px;
-//     height: 75px;
 
-//   }
-//  }
 
 @include mobile() {
+
+  .project-title{
+    padding-bottom: 47px;
+    
+   
+  }
   .carousel-wrapper {
-    // min-width: 320px;
+   
 
     h2 {
       padding: 20px;
@@ -132,9 +132,9 @@
     .carousel-slider {
       display: flex;
       flex-direction: column;
-      // align-items: flex-end;
+      
       justify-content: space-around;
-      // margin-bottom: 20px;
+     
 
       img {
         width: 180px;

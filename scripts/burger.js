@@ -10,3 +10,5 @@ burger.addEventListener('click', () => {
 function first(){
     document.getElementById('first-child').innerHTML = ('span')
 }
+
+
